@@ -1,0 +1,38 @@
+{
+  "name": "@protectyr-labs/attack-validator",
+  "version": "1.0.0",
+  "description": "MITRE ATT&CK technique ID validator for LLM outputs. 3-tier hallucination detection: verified, unverified, stripped.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mitre",
+    "attack",
+    "att&ck",
+    "technique",
+    "validator",
+    "llm",
+    "hallucination",
+    "security",
+    "cybersecurity"
+  ],
+  "author": "Protectyr Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/protectyr-labs/attack-validator.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
