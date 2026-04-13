@@ -42,6 +42,14 @@ const result = validateTechniqueIds(
 - **Per-incident-type allowed lists** -- reduce hallucination surface by scoping what's expected
 - **Full analysis validation** -- `validateAnalysisResult()` processes findings + technique summaries in one call
 
+## Use Cases
+
+**Security analysis pipelines** -- Your LLM analyzes evidence and outputs MITRE ATT&CK technique IDs. Some are real, some are hallucinated. This validator separates them without losing real findings.
+
+**Threat intelligence reports** -- Auto-generated threat reports reference ATT&CK techniques. Before publishing, validate that every referenced technique exists and matches the incident type.
+
+**Compliance auditing** -- Mapping incidents to ATT&CK is required by some compliance frameworks. Validated technique IDs are audit-ready; unverified ones are flagged for human review.
+
 ## API
 
 | Function | Description |
