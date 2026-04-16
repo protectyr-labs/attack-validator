@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="1200" height="220">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="220" fill="url(#bg)" rx="0"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#94a3b8" stroke-width="0.5">
+    <line x1="0" y1="44" x2="1200" y2="44"/>
+    <line x1="0" y1="88" x2="1200" y2="88"/>
+    <line x1="0" y1="132" x2="1200" y2="132"/>
+    <line x1="0" y1="176" x2="1200" y2="176"/>
+    <line x1="150" y1="0" x2="150" y2="220"/>
+    <line x1="300" y1="0" x2="300" y2="220"/>
+    <line x1="450" y1="0" x2="450" y2="220"/>
+    <line x1="600" y1="0" x2="600" y2="220"/>
+    <line x1="750" y1="0" x2="750" y2="220"/>
+    <line x1="900" y1="0" x2="900" y2="220"/>
+    <line x1="1050" y1="0" x2="1050" y2="220"/>
+  </g>
+
+  <!-- Left side: Title and description -->
+  <text x="60" y="78" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#f8fafc" letter-spacing="-0.5">attack-validator</text>
+  <text x="60" y="112" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="15" fill="#94a3b8">MITRE ATT&amp;CK technique ID validator for LLM outputs</text>
+
+  <!-- Accent line -->
+  <rect x="60" y="126" width="60" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- Subtitle -->
+  <text x="60" y="158" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" fill="#64748b">3-tier hallucination detection</text>
+  <text x="60" y="178" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="12" fill="#475569">verified  |  unverified  |  stripped</text>
+
+  <!-- Right side: Validation visualization -->
+  <!-- Terminal window frame -->
+  <rect x="640" y="28" width="510" height="164" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="640" y="28" width="510" height="24" rx="8" fill="#1e293b"/>
+  <rect x="640" y="44" width="510" height="8" fill="#1e293b"/>
+  <!-- Window dots -->
+  <circle cx="658" cy="40" r="4" fill="#f87171" opacity="0.7"/>
+  <circle cx="672" cy="40" r="4" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="686" cy="40" r="4" fill="#4ade80" opacity="0.7"/>
+
+  <!-- Terminal content: LLM output with validation -->
+  <text x="660" y="74" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#64748b">// LLM output with technique IDs</text>
+
+  <!-- Verified: T1566 -->
+  <text x="660" y="96" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="12.5" fill="#e2e8f0">T1566</text>
+  <text x="720" y="96" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#475569">Phishing</text>
+  <!-- Green check -->
+  <circle cx="1110" cy="92" r="9" fill="none" stroke="#4ade80" stroke-width="1.5" opacity="0.3"/>
+  <path d="M1104 92 L1108 96 L1116 87" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="96" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="10" fill="#4ade80">verified</text>
+
+  <!-- Verified: T1078 -->
+  <text x="660" y="118" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="12.5" fill="#e2e8f0">T1078</text>
+  <text x="720" y="118" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#475569">Valid Accounts</text>
+  <!-- Green check -->
+  <circle cx="1110" cy="114" r="9" fill="none" stroke="#4ade80" stroke-width="1.5" opacity="0.3"/>
+  <path d="M1104 114 L1108 118 L1116 109" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="118" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="10" fill="#4ade80">verified</text>
+
+  <!-- Unverified: T9999 -->
+  <text x="660" y="140" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="12.5" fill="#e2e8f0">T9999</text>
+  <text x="720" y="140" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#475569">???</text>
+  <!-- Yellow warning triangle -->
+  <path d="M1110 104 L1119 120 L1101 120 Z" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="1107" y="118" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="9" fill="#fbbf24" font-weight="700">!</text>
+  <text x="830" y="140" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="10" fill="#fbbf24">unverified</text>
+
+  <!-- Stripped: HALLUCINATED -->
+  <text x="660" y="162" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="12.5" fill="#e2e8f0" opacity="0.4" text-decoration="line-through">MITRE-FAKE</text>
+  <!-- Red X -->
+  <line x1="1104" y1="152" x2="1116" y2="164" stroke="#fb7185" stroke-width="2" stroke-linecap="round"/>
+  <line x1="1116" y1="152" x2="1104" y2="164" stroke="#fb7185" stroke-width="2" stroke-linecap="round"/>
+  <text x="830" y="162" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="10" fill="#fb7185">stripped</text>
+
+  <!-- Bottom: protectyr-labs -->
+  <text x="660" y="183" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="10" fill="#334155">protectyr-labs</text>
+</svg>
